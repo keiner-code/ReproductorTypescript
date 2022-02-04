@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function Hero(name) {
+    this.name = name;
+}
+Hero.prototype.saludar = function() {
+    console.log(`Hola Soy ${this.name}`);
+};
+const zelda = new Hero('Selda');
+//propiedades de la instancia
+console.log('Name: ', zelda.name);
+//propiedades de la clase
+console.log('saludar', zelda.saludar);
+//propiedades heredadas por ejemplo toString
+console.log('toString: ', zelda.toString);
+//hasOwnProperty (de donde sale toString o esto)
+console.log('zelda.hasOwnProperty("saludar"): ', zelda.hasOwnProperty('saludar'));
+
+</script>
+</body>
+</html>
